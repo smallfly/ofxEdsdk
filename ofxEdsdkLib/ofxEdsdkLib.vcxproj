@@ -55,25 +55,25 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="..\..\..\openFrameworks\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
     <Import Project="ofxEdsdk.props" />
     <Import Project="..\..\ofxAddonLib\ofxAddonLib.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="..\..\..\openFrameworks\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
     <Import Project="ofxEdsdk.props" />
     <Import Project="..\..\ofxAddonLib\ofxAddonLib.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="..\..\..\openFrameworks\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
     <Import Project="ofxEdsdk.props" />
     <Import Project="..\..\ofxAddonLib\ofxAddonLib.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="..\..\..\openFrameworks\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
     <Import Project="ofxEdsdk.props" />
     <Import Project="..\..\ofxAddonLib\ofxAddonLib.props" />
   </ImportGroup>
@@ -86,21 +86,21 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../addons/ofxEdsdk/libs/EDSDK/include;../../../addons/ofxEdsdk/src;../../../addons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../externalAddons/ofxEdsdk/libs/EDSDK/include;../../../externalAddons/ofxEdsdk/src;../../../externalAddons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../../../addons/ofxEdsdk/libs/EDSDK/lib/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../externalAddons/ofxEdsdk/libs/EDSDK/lib/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>..\..\..\addons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)..\..\..\addons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -109,19 +109,19 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../addons/ofxEdsdk/libs/EDSDK/include;../../../addons/ofxEdsdk/src;../../../addons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../externalAddons/ofxEdsdk/libs/EDSDK/include;../../../externalAddons/ofxEdsdk/src;../../../externalAddons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../addons/ofxEdsdk/libs/EDSDK/lib/win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../externalAddons/ofxEdsdk/libs/EDSDK/lib/win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\addons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)..\..\..\addons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -132,21 +132,21 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../addons/ofxEdsdk/libs/EDSDK/include;../../../addons/ofxEdsdk/src;../../../addons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../externalAddons/ofxEdsdk/libs/EDSDK/include;../../../externalAddons/ofxEdsdk/src;../../../externalAddons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>../../../addons/ofxEdsdk/libs/EDSDK/lib/win32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../externalAddons/ofxEdsdk/libs/EDSDK/lib/win32</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDSDK.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>..\..\..\addons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)..\..\..\addons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -157,42 +157,42 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../addons/ofxEdsdk/libs/EDSDK/include;../../../addons/ofxEdsdk/src;../../../addons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../externalAddons/ofxEdsdk/libs/EDSDK/include;../../../externalAddons/ofxEdsdk/src;../../../externalAddons/ofxEdsdk/src/EdsWrapper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../addons/ofxEdsdk/libs/EDSDK/lib/win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../externalAddons/ofxEdsdk/libs/EDSDK/lib/win64</AdditionalLibraryDirectories>
     </Link>
     <Lib>
       <AdditionalDependencies>EDSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\addons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\lib\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)..\..\..\addons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\bin\$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsExamples.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsException.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsStrings.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsWrapper.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\ofxEdsdk.cpp" />
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsExamples.cpp" />
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsException.cpp" />
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsStrings.cpp" />
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsWrapper.cpp" />
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\ofxEdsdk.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\libs\EDSDK\include\EDSDK.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\libs\EDSDK\include\EDSDKErrors.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\libs\EDSDK\include\EDSDKTypes.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsExamples.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsException.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsStrings.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsWrapper.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\FixedQueue.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\ofxEdsdk.h" />
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\RateTimer.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\include\EDSDK.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\include\EDSDKErrors.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\include\EDSDKTypes.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsExamples.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsException.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsStrings.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsWrapper.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\FixedQueue.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\ofxEdsdk.h" />
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\RateTimer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

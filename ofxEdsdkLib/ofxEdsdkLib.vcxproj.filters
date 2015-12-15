@@ -18,51 +18,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\ofxEdsdk.cpp">
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\ofxEdsdk.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsExamples.cpp">
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsExamples.cpp">
       <Filter>src\EdsWrapper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsException.cpp">
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsException.cpp">
       <Filter>src\EdsWrapper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsStrings.cpp">
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsStrings.cpp">
       <Filter>src\EdsWrapper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsWrapper.cpp">
+    <ClCompile Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsWrapper.cpp">
       <Filter>src\EdsWrapper</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\libs\EDSDK\include\EDSDKTypes.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\include\EDSDKTypes.h">
       <Filter>libs\EDSDK\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\libs\EDSDK\include\EDSDKErrors.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\include\EDSDKErrors.h">
       <Filter>libs\EDSDK\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\libs\EDSDK\include\EDSDK.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\libs\EDSDK\include\EDSDK.h">
       <Filter>libs\EDSDK\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\RateTimer.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\RateTimer.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\FixedQueue.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\FixedQueue.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\ofxEdsdk.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\ofxEdsdk.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsExamples.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsExamples.h">
       <Filter>src\EdsWrapper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsException.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsException.h">
       <Filter>src\EdsWrapper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsStrings.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsStrings.h">
       <Filter>src\EdsWrapper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEdsdk\src\EdsWrapper\EdsWrapper.h">
+    <ClInclude Include="..\..\..\externalAddons\ofxEdsdk\src\EdsWrapper\EdsWrapper.h">
       <Filter>src\EdsWrapper</Filter>
     </ClInclude>
   </ItemGroup>
